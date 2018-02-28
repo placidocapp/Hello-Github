@@ -30,7 +30,10 @@ commented, to test it just uncomment. The function save the theta values
 after the gradient descent and in the end it plots the train accuracy and 
 the test accuracy.
 
+<<<<<<< HEAD
 RedeNeuralMomentumGradient --> I am still working on this, although until now 
 it doesn't worked very well for this problem (maybe i am doing something wrong),
 because for usual beta parameters, (about 0.9 in my research) the solution diverge.
+=======
+>>>>>>> bfe0a0233b5ea96c37da014bc8044b3f3104f2d5
 
