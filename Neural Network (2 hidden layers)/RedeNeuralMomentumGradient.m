@@ -2,10 +2,12 @@ clear all;
 close all;
 clc
 
+format long;
+
 %Rede neural para entender os 9 números
 %%  %PARAMETROS DA REDE NEURAL
-numCamada1 = 34;
-numCamada2 = 34;
+numCamada1 = 40;
+numCamada2 = 40;
 lambda = 1;
 
 %%  %Recebe os dados
@@ -27,13 +29,13 @@ x = X_train;
 %%  %Otimiza função de custo
 
 try
-    load('OptThetas_34_camadas')
+    load('OptThetas_40_layers')
 catch
 
     %PARAMETROS
     maxIter = 4000;
-    alpha = 2;
-    beta = 0.6;
+    alpha = 0.1;
+    beta = 0.5;
     eps = 10^-6;
     maxRestart = 1;
     mul = 1;
@@ -65,9 +67,9 @@ catch
             Vtheta2 = (beta)*Vtheta2_ant + (1-beta)*dtheta2;
             Vtheta3 = (beta)*Vtheta3_ant + (1-beta)*dtheta3;
             
-            Vtheta1 = Vtheta1/(1-beta^2);
-            Vtheta2 = Vtheta2/(1-beta^2);
-            Vtheta3 = Vtheta3/(1-beta^2);
+%             Vtheta1 = Vtheta1/(1-beta^3);
+%             Vtheta2 = Vtheta2/(1-beta^3);
+%             Vtheta3 = Vtheta3/(1-beta^3);
             
             %avança o passo
             theta1 = theta1 - alpha*Vtheta1;
@@ -105,7 +107,7 @@ catch
     theta3 = melhorTheta3;
 
     %salva valores ótimos
-    save('OptThetas_34_camadas', 'theta1', 'theta2', 'theta3');
+    save('OptThetas_40_layers', 'theta1', 'theta2', 'theta3');
 end
 
 %%  %Confere gradiente

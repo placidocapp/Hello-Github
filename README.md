@@ -34,3 +34,5 @@ RedeNeuralMomentumGradient --> I am still working on this, although until now
 it doesn't worked very well for this problem (maybe i am doing something wrong),
 because for usual beta parameters, (about 0.9 in my research) the solution diverge.
 
+The best results I have got are on the OptThetas_34_layers.
+
