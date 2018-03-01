@@ -37,3 +37,5 @@ because for usual beta parameters, (about 0.9 in my research) the solution diver
 =======
 >>>>>>> bfe0a0233b5ea96c37da014bc8044b3f3104f2d5
 
+The best results I have got are on the OptThetas_34_layers.
+
